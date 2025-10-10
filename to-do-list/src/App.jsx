@@ -4,13 +4,28 @@ import TodoItems from "./components/TodoItems"
 
 function App() {
 
+  const todoItemsList = [
+    {
+    name: 'Buy Milk',
+    dueDate: '8/10/2025'
+  },
+    {
+    name: 'Go to College',
+    dueDate: '8/10/2025'
+  },
+    {
+    name: 'Go to College',
+    dueDate: '8/10/2025'
+  },
+]
+
   return (
     <>
       <div className="container">
         <TodoHeading></TodoHeading>
-        <div className="row ">
+        <div className="row">
           <TodoInput></TodoInput>
-          <TodoItems></TodoItems>
+          <TodoItems todoItems={todoItemsList}></TodoItems>
         </div>
       </div>
     </>
