@@ -1,16 +1,22 @@
 import TodoItem from "./TodoItem";
+import { TodoItemsContext } from "../store/to-do-items-stor";
+import { useContext } from "react";
 
-const TodoItems = ({todoItems}) => {
+const TodoItems = () => {
+  
+  const { todoItems } = useContext(TodoItemsContext)
+
+
   return(
     <>
       <div className="item-container">
         {todoItems.map((item,index)=>(
-        <TodoItem key={index} todoName={item.name} todoDate={item.dueDate}></TodoItem>
+        <TodoItem 
+        key={index} 
+        todoName={item.name} 
+        todoDate={item.dueDate}
+        ></TodoItem>
         ))}
-        {/* <TodoItem todoName="Buy Milk" todoDate="14/10/2025"></TodoItem>
-        <TodoItem todoName="Buy Milk" todoDate="14/10/2025"></TodoItem>
-        <TodoItem todoName="Buy Milk" todoDate="14/10/2025"></TodoItem>
-        <TodoItem todoName="Buy Milk" todoDate="14/10/2025"></TodoItem> */}
       </div>
     </>
   );

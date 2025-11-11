@@ -2,7 +2,7 @@ import ClockHeading from "./components/ClockHeading"
 import ClockDescription from "./components/ClockDescription"
 import CurrentTime from "./components/CurrentTime"
 function App() {
-
+  
   return (
     <>
       <div className="container text-center">
