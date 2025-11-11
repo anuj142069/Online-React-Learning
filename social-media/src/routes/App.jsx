@@ -10,14 +10,16 @@ import PostListProvider from "../store/post-list-store";
 
 function App() {
 
-  const [selectedTab, setSelectedTab] = useState("Home");
+  // const [selectedTab, setSelectedTab] = useState("Home");
 
   return(
     <>  
       <Container>
         <PostListProvider>
-          <SideBar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></SideBar>
-          <div className="content">
+          <SideBar
+          //  selectedTab={selectedTab} setSelectedTab={setSelectedTab}
+          ></SideBar>
+          <div className="content overflow-x-hidden">
             <Header></Header>
             <Outlet />
             {/* {selectedTab === "Home" ? (<PostList></PostList>) : (<CreatePost></CreatePost>)} */}
