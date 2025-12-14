@@ -4,17 +4,17 @@ import Display from "./components/Display"
 
 function App() {
 
-  const [calVal, seCalVal] = useState("");
+  const [calVal, setCalVal] = useState("");
 
   const onButtonClick = (buttonText) => {
     if(buttonText === 'C'){
-      seCalVal("");
+      setCalVal("");
     }else if (buttonText === '='){
       const result = eval(calVal);
-      seCalVal(result);
+      setCalVal(result);
     }else{
       const newDisplayValue = calVal + buttonText;
-      seCalVal(newDisplayValue)
+      setCalVal(newDisplayValue)
     }
   }
   
